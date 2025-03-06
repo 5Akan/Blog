@@ -1,7 +1,7 @@
 function Newsletter(params) {
     return(
         <>
-        <h1>The news</h1>
+        <h1>The newsletter again</h1>
         </>)
          
     

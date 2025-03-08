@@ -2,7 +2,7 @@ function Home(params) {
    
     return(
         <>
-        <h1>My House </h1>
+        <h1>My House just for commit</h1>
         </>)
            
 }

@@ -1,8 +1,19 @@
 import React, {useState} from "react";
-function Home() {
+import { Link } from "react-router-dom";
+function Home(props) {
 
-   
-   
+const articles = props.articles;
+
+const articleList = articles.map(article=>
+    <li key = {article.id}>
+        <h2>
+        <Link to={`/article/${article.id}`}>
+        {article.title}
+        </Link>       
+        </h2>
+    </li>
+    
+)
     return(
         
         <div>
@@ -11,15 +22,12 @@ function Home() {
             Quae quisquam, quos perspiciatis omnis eum autem quam assumend
             a vel saepe sint magnam itaque harum nemo sunt temporibus iure 
             voluptastempore? Impedit?</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Laborum, unde perspiciatis eum illo, quibusdam iusto fugit
-              aliquam vitae culpa debitis molestias. Nam assumenda,
-              placeat eveniet cumque alias aliquid? Quia, nam.</p>
-
-              <h1>Latest Articles</h1>
-              <p className="articles">
-                Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
-              </p> <span>Date</span>
+            <h1>Latest Articles</h1>
+            <ul>
+                {articleList}
+            </ul>
+            
+            <span>Date</span>
         </div>
        )
            

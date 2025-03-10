@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route, Link, useParams } from 'react-router-dom'
 import Home from './Pages/Home.jsx';
 import Newsletter from './Pages/Newsletter.jsx';
 import Blog from './Pages/Blog.jsx';
@@ -9,6 +9,16 @@ import React, {useState} from "react";
 function App() {
   
   const [toggle,setToggle] = useState(false);
+
+  const articles = [{
+    id:1, title:"Doing Something", content:";A;osiajnhgo[ajibaoijevojs[ojkodfnbjndlfbvanlkdbvnaohv"
+  },
+  {
+    id:2, title:"Doing Nothing", content:";A;osiajnhgo[ajibaoijevojs[ojkodfnbjndlfbvanlkdbvnaohv"
+  },
+  {
+    id:3, title:"Doing Anything", content:";A;osiajnhgo[ajibaoijevojs[ojkodfnbjndlfbvanlkdbvnaohv"
+  },]
 
   
   function changeTheme() {
@@ -29,7 +39,7 @@ function App() {
       <nav>
         <Link to = "/">Home</Link>
         <Link to = "/about">About</Link>
-        <Link to = "/blog">Blog</Link>
+        <Link to = "/blog/1">Blog</Link>
         <Link to = "/newsletter">Newsletter</Link>
         
          <button id='theme-button' onClick={changeTheme}>
@@ -37,9 +47,10 @@ function App() {
       </nav>
 
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Home  articles = {articles}/>} />
         <Route path="/about" element={<About />} />
-        <Route path="/blog" element={<Blog />} />
+        {/* <Route path="/blog" element={<Blog />} />  */}
+        <Route path="/blog/:id" element={<Blog articles = {articles}/>} />
         <Route path="/newsletter" element={<Newsletter />} />
       </Routes>
       

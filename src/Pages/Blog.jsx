@@ -4,7 +4,7 @@ function Blog(props) {
 
     const articles = props.articles;
     const {id} = useParams();
-
+    console.log(id)
     const selectArticle = articles.find((article)=> article.id === parseInt(id));
     return(
         <>
@@ -13,7 +13,7 @@ function Blog(props) {
         <p>{selectArticle.content}</p>
         </>)
          
-        //  this should have everything
+        //  this component should have all the articles and their info
 
         //take what you have done here and put in an 
         //articles page that gives info for each article

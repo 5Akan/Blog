@@ -3,8 +3,8 @@ import Home from './Pages/Home.jsx';
 import Newsletter from './Pages/Newsletter.jsx';
 import Blog from './Pages/Blog.jsx';
 import About from './Pages/About.jsx';
+import AllBlogs from './Pages/AllBlogs.jsx';
 import React, {useState} from "react";
-
 
 function App() {
   
@@ -39,7 +39,7 @@ function App() {
       <nav>
         <Link to = "/">Home</Link>
         <Link to = "/about">About</Link>
-        <Link to = "/blog/1">Blog</Link>
+        <Link to = "/AllBlogs">Blog</Link>
         <Link to = "/newsletter">Newsletter</Link>
         
          <button id='theme-button' onClick={changeTheme}>
@@ -49,8 +49,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Home  articles = {articles}/>} />
         <Route path="/about" element={<About />} />
-        {/* <Route path="/blog" element={<Blog />} />  */}
-        <Route path="/blog/:id" element={<Blog articles = {articles}/>} />
+        <Route path="/AllBlogs" element ={<AllBlogs articles = {articles}/>}/>
+        <Route path="/article/:id" element={<Blog articles = {articles}/>} />
         <Route path="/newsletter" element={<Newsletter />} />
       </Routes>
       

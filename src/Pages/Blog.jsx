@@ -4,7 +4,7 @@ function Blog(props) {
 
     const articles = props.articles;
     const {id} = useParams();
-    console.log(id)
+    console.log()
     const selectArticle = articles.find((article)=> article.id === parseInt(id));
     return(
         <>

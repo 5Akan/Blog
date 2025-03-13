@@ -4,6 +4,7 @@ import Newsletter from './Pages/Newsletter.jsx';
 import Blog from './Pages/Blog.jsx';
 import About from './Pages/About.jsx';
 import AllBlogs from './Pages/AllBlogs.jsx';
+import SuccessMessage from './Pages/SuccessMessage.jsx';
 import React, {useState} from "react";
 
 function App() {
@@ -70,6 +71,7 @@ function App() {
         <Route path="/AllBlogs" element ={<AllBlogs articles = {articles}/>}/>
         <Route path="/article/:id" element={<Blog articles = {articles}/>} />
         <Route path="/newsletter" element={<Newsletter />} />
+        <Route path='/success' element={<SuccessMessage />}/>
       </Routes>
       
     </Router>

@@ -38,6 +38,13 @@ const articleList = articles.slice(0 , articleCount).map(article=>
             Quae quisquam, quos perspiciatis omnis eum autem quam assumend
             a vel saepe sint magnam itaque harum nemo sunt temporibus iure 
             voluptastempore? Impedit?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores
+                 provident impedit dicta consectetur facere in, autem veniam nulla
+                 fugit iste repellendus tenetur eveniet voluptate, esse dolor quas
+                 deserunt officiis, dolorem obcaecati inventore eos laborum quod?
+                 Voluptates similique laboriosam quisquam tempore ipsum explicabo 
+                 architecto accusamus amet consectetur, possimus sapiente,
+                 laudantium ducimus.</p>
             <h1>Latest Articles</h1>
             <ul>
                 {articleList}

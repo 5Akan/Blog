@@ -1,11 +1,35 @@
-#body{
+body{
     margin: 0px;
     width: 100vw;
     height: 100vh; 
     padding: 0px;
 }
-div{
+.body{
     width: 100vw;
     height: 100vh; 
     margin: 0px;
+}
+.navigation{
+    padding: 10px;
+    background-color: grey;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    
+}
+.navLink{
+    display: flex;
+    list-style: none;
+    gap: 15px;
+    padding: 0;
+    margin: 0;
+}
+.navLink a{
+    text-decoration: none;
+    color: inherit;/*Takes the color of the other default text*/
+
+
+}
+.navLink a.active{
+text-decoration: underline;
 }

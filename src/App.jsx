@@ -52,17 +52,23 @@ function App() {
   }
   return (
 
-    <div id="body" >
+    <div id="body" className ='body'>
     <Router>
       
-      <nav>
-        <Link to = "/">Home</Link>
-        <Link to = "/about">About</Link>
-        <Link to = "/AllBlogs">Blog</Link>
-        <Link to = "/newsletter">Newsletter</Link>
-        
-         <button id='theme-button' onClick={changeTheme}>
+      <nav className='navigation'>
+        <ul className='navLink'>
+          <li><Link to = "/" className ={({isActive}) => isActive ? "active" : ""}>Home</Link></li>
+          <li><Link to = "/about" className ={({isActive})=>isActive?"active":""}>About</Link></li>
+          <li><Link to = "/AllBlogs" className ={({isActive})=>isActive?"active":""}>Blog</Link></li>
+          <li><Link to = "/newsletter" className ={({isActive})=>isActive?"active":""}>Newsletter</Link></li>
+
+          {/* Handling underline of each nav */}
+
+          <button id='theme-button' onClick={changeTheme}>
         { toggle ? 'Light':'Dark' }</button>
+        </ul>
+        
+        
       </nav>
 
       <Routes>

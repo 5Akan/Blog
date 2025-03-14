@@ -5,7 +5,7 @@ function Newsletter() {
 
     const [email, setEmail] = useState("");
     const [error, setError] = useState("");
-    const navigate = useNavigate()
+    const navigate = useNavigate();
 //Function checks if email is in correct format
    function emailErrorCheck(email) {
        const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;

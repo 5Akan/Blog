@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route, Link, useParams } from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route, NavLink, useParams } from 'react-router-dom'
 import Home from './Pages/Home.jsx';
 import Newsletter from './Pages/Newsletter.jsx';
 import Blog from './Pages/Blog.jsx';
@@ -57,10 +57,12 @@ function App() {
       
       <nav className='navigation'>
         <ul className='navLink'>
-          <li><Link to = "/" className ={({isActive}) => isActive ? "active" : ""}>Home</Link></li>
-          <li><Link to = "/about" className ={({isActive})=>isActive?"active":""}>About</Link></li>
-          <li><Link to = "/AllBlogs" className ={({isActive})=>isActive?"active":""}>Blog</Link></li>
-          <li><Link to = "/newsletter" className ={({isActive})=>isActive?"active":""}>Newsletter</Link></li>
+          {/* NavLink.
+It automatically applies a class when the link matches the current route. */}
+          <li><NavLink to = "/" className = {({isActive}) => isActive ? "active" : ""}>Home</NavLink></li>
+          <li><NavLink to = "/about" className = {({isActive})=>isActive?"active":""}>About</NavLink></li>
+          <li><NavLink to = "/AllBlogs" className = {({isActive})=>isActive?"active":""}>Blog</NavLink></li>
+          <li><NavLink to = "/newsletter" className = {({isActive})=>isActive?"active":""}>Newsletter</NavLink></li>
 
           {/* Handling underline of each nav */}
 

@@ -33,7 +33,7 @@ const articleList = articles.slice(0 , articleCount).map(article=>
     return(
         
         <div>
-            <h1>Hi, I'm Akanimoh</h1>
+            <h1 className="heading">Hi, I'm Akanimoh</h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
             Quae quisquam, quos perspiciatis omnis eum autem quam assumend
             a vel saepe sint magnam itaque harum nemo sunt temporibus iure 
@@ -45,14 +45,15 @@ const articleList = articles.slice(0 , articleCount).map(article=>
                  Voluptates similique laboriosam quisquam tempore ipsum explicabo 
                  architecto accusamus amet consectetur, possimus sapiente,
                  laudantium ducimus.</p>
-            <h1>Latest Articles</h1>
+                <h2 className="article-head">Latest Articles</h2> 
+           
             <ul>
                 {articleList}
             </ul>
            <p onClick={handleToggleArticleLength}>
                {/* when clicked it fires the function that toggles between 
                full articles and 4 articles displayed */}
-               {articleCount === 4? "View More Articles" : "View Less Articles"}
+               {articleCount === 4 ? "View More Articles" : "View Less Articles"}
            </p>
         </div>
        )

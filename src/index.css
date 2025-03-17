@@ -3,11 +3,16 @@ body{
     width: 100vw;
     height: 100vh; 
     padding: 0px;
+    font-family: Arial, sans-serif;
 }
 .body{
     width: 100vw;
     height: 100vh; 
     margin: 0px;
+}
+
+.heading{
+    text-decoration: underline aqua;
 }
 .navigation{
     padding: 10px;
@@ -30,7 +35,31 @@ body{
 
 
 }
-.navLink a.active{
-text-decoration: underline;
-/* G again tomorrowffffgit*/
+a{
+    text-decoration: none;
+    color: inherit;/*Takes the color of the other default text*/
+
+
 }
+.navLink a.active{
+text-decoration: underline aqua;
+
+}
+
+.article-head::after{
+    content: "";
+    display: inline-block;
+    width: 50px;
+    height: 2px;
+    background-color: aqua;
+    margin-left: 10px;
+}
+/* .line-left::before {
+    content: "";
+    display: inline-block;
+    width: 50px; /* Line length */
+    /* height: 2px; Line thickness */
+    /* background-color: black;
+    margin-right: 10px; /* Space between line and text */
+    /* vertical-align: middle;  */
+/* } */ 

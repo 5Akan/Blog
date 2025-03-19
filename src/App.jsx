@@ -6,6 +6,8 @@ import About from './Pages/About.jsx';
 import AllBlogs from './Pages/AllBlogs.jsx';
 import SuccessMessage from './Pages/SuccessMessage.jsx';
 import React, {useState} from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSun, faMoon } from "@fortawesome/free-solid-svg-icons";
 
 function App() {
   
@@ -43,6 +45,7 @@ function App() {
   function changeTheme() {
     setToggle(!toggle);
     if(toggle){
+      
       document.getElementById("body").style.backgroundColor = "white"
       document.getElementById("body").style.color = "black"
     }else{
@@ -67,7 +70,8 @@ It automatically applies a class when the link matches the current route. */}
           {/* Handling underline of each nav */}
 
           <button id='theme-button' onClick={changeTheme}>
-        { toggle ? 'Light':'Dark' }</button>
+          <FontAwesomeIcon className='icon' icon={toggle ? faMoon : faSun} /></button>
+      
         </ul>
         
         

@@ -54,12 +54,6 @@ text-decoration: underline aqua;
     background-color: aqua;
     margin-left: 10px;
 }
-/* .line-left::before {
-    content: "";
-    display: inline-block;
-    width: 50px; /* Line length */
-    /* height: 2px; Line thickness */
-    /* background-color: black;
-    margin-right: 10px; /* Space between line and text */
-    /* vertical-align: middle;  */
-/* } */ 
+.icon{
+    width: 50px;
+}

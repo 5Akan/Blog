@@ -21,7 +21,8 @@ function AllBlogs(props) {
         {allBlogLists}
         </ul>
        {/* handling update in mongo database */}
-   
+       {/* after update delete ,exporting and importing as JSON file  */}
+   {/* 41:34 */}
     </>)
 }
 

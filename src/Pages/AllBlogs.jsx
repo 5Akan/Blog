@@ -22,8 +22,9 @@ function AllBlogs(props) {
         </ul>
        {/* handling update in mongo database */}
        {/* after update delete ,exporting and importing as JSON file  */}
-   {/* 41:34 */}
+   {/* 51:54 */}
    {/* comparisons operators such as notEqualsTo, lessthan, greaterthan */}
+   {/* Worked on logical operators $and, $nor, $or and $not */}
     </>)
 }
 

@@ -25,7 +25,9 @@ function AllBlogs(props) {
    {/* 51:54 */}
    {/* comparisons operators such as notEqualsTo, lessthan, greaterthan */}
    {/* Worked on logical operators $and, $nor, $or and $not */}
+    {/* finished the alone part and about to start using it with node.js */}
     </>)
+    
 }
 
 export default AllBlogs
